@@ -29,7 +29,8 @@ alter table curso add foreign key(fk_depa_nombre) references departamento(depa_n
 alter table prerequisitos add primary key(fk_id_curso0, fk_id_curso1); 
 alter table prerequisitos add foreign key(fk_id_curso0) references curso(id_curso); 
 alter table prerequisitos add foreign key(fk_id_curso1) references curso(id_curso); 
---clase alter table clase add primary key(clase_id_edificio, clase_id_numero); 
+--clase 
+alter table clase add primary key(clase_id_edificio, clase_id_numero); 
 --SECCION 
 alter table seccion add primary key(id_seccion); 
 alter table seccion add foreign key(fk_edificio, fk_numero) references clase(clase_id_edificio, clase_id_numero); 
